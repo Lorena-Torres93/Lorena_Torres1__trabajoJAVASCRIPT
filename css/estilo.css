@@ -1,0 +1,580 @@
+/* Estilo General */
+body {
+    font-family: 'Merriweather', serif; /* Fuente para el cuerpo, serif facilita la lectura */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina relleno por defecto */
+    background-color: #f1f1f1; /* Fondo claro para todo el cuerpo */
+    color: #333; /* Color de texto oscuro para buen contraste */
+}
+
+/* Cabecera */
+header {
+    background-color: #a52727; /* Color de fondo rojo oscuro para la cabecera */
+    padding: 20px; /* Relleno alrededor del contenido */
+    text-align: center; /* Centra el contenido en la cabecera */
+    color: #fff; /* Color blanco para el texto */
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    justify-content: center; /* Alinea horizontalmente al centro */
+    align-items: center; /* Alinea verticalmente al centro */
+    flex-direction: row; /* Alineación de los elementos en fila */
+}
+
+header .logo {
+    margin-right: 15px; /* Espacio entre el logo y el título */
+}
+
+header .logo img {
+    width: 80px; /* Tamaño del logo ajustado */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+header h1 {
+    margin: 0; /* Elimina el margen por defecto del título */
+    font-size: 2.5em; /* Tamaño grande para el título */
+    font-family: 'Playfair Display', serif; /* Fuente elegante para el título */
+    font-style: italic; /* Estilo de fuente en cursiva */
+}
+
+/* Barra de Navegación */
+nav {
+    background-color: #b71c1c; /* Fondo rojo brillante para la barra de navegación */
+    padding: 10px; /* Relleno alrededor de los enlaces */
+    text-align: center; /* Centra los enlaces dentro de la barra */
+}
+
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+nav ul li {
+    display: inline; /* Muestra los elementos de la lista en línea */
+    margin-right: 20px; /* Espacio entre los elementos de la lista */
+}
+
+nav ul li a {
+    color: #fff; /* Color blanco para los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold; /* Pone los enlaces en negrita */
+    font-size: 1.2em; /* Aumenta el tamaño de la fuente de los enlaces */
+    font-family: 'Merriweather', serif; /* Fuente serif para los enlaces */
+    transition: color 0.3s ease; /* Suave transición para el cambio de color al pasar el cursor */
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    text-decoration: underline; /* Subraya el enlace al pasar el cursor */
+    color: #ffcccb; /* Cambia el color al pasar el cursor */
+}
+
+/* Elementos interactivos - accesibilidad */
+button:focus, a:focus {
+    outline: 3px solid #ffcccb; /* Contorno visible para mejorar la accesibilidad */
+    outline-offset: 2px; /* Desplaza ligeramente el contorno */
+}
+
+/* Sección de Bienvenida */
+#bienvenida {
+    text-align: center; /* Centra el texto */
+    padding: 40px; /* Relleno en todos los lados */
+    background-color: #fff; /* Fondo blanco para la sección de bienvenida */
+    margin: 20px 0; /* Márgenes superior e inferior */
+    display: flex; /* Utiliza flexbox para organizar el contenido */
+    flex-direction: column; /* Organiza el contenido de manera vertical */
+    align-items: center; /* Alinea los elementos al centro */
+}
+
+#bienvenida h2 {
+    font-size: 2.5em; /* Tamaño grande para el título */
+    color: #d32f2f; /* Rojo para el título */
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+#bienvenida p {
+    font-size: 1.2em; /* Tamaño de texto más grande */
+    margin-bottom: 20px; /* Espacio debajo del párrafo */
+    font-family: 'Merriweather', serif; /* Fuente serif para el párrafo */
+    color: #555; /* Color gris para el texto */
+    line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+}
+
+/* Sección de Menú */
+#menu {
+    text-align: center; /* Centra el texto */
+    display: flex; /* Utiliza flexbox para organizar el contenido */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    padding: 40px; /* Relleno alrededor de la sección */
+    background-color: #fff; /* Fondo blanco */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+#menu h2 {
+    text-align: center; /* Centra el título */
+    font-size: 2.5em; /* Tamaño grande para el título */
+    color: #a52727; /* Color rojo para el título */
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    width: 100%; /* El título ocupa el 100% del ancho */
+    margin-bottom: 40px; /* Espacio debajo del título */
+}
+
+.plato {
+    text-align: center; /* Centra el contenido de cada plato */
+    width: 30%; /* Cada plato ocupa el 30% del ancho */
+    display: flex; /* Utiliza flexbox para organizar los elementos dentro del plato */
+    flex-direction: column; /* Organiza los elementos de cada plato en columna */
+    align-items: center; /* Centra los elementos del plato */
+    margin: 20px; /* Espacio entre los platos */
+}
+
+.plato h3 {
+    font-size: 1.8em; /* Tamaño de fuente para los nombres de los platos */
+    color: #a52727; /* Color rojo para el nombre del plato */
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    margin-bottom: 15px; /* Espacio debajo del nombre del plato */
+}
+
+.plato img {
+    width: 100%; /* Las imágenes ocupan el 100% del contenedor */
+    height: 300px; /* Tamaño de las imágenes */
+    object-fit: cover; /* Mantiene la relación de aspecto y cubre el contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Efecto de zoom suave al pasar el cursor */
+}
+
+.plato img:hover {
+    transform: scale(1.05); /* Aumento de tamaño de la imagen al pasar el cursor */
+}
+
+.plato p {
+    font-size: 1.2em; /* Tamaño de texto para la descripción del plato */
+    color: #555; /* Color gris para el texto */
+    font-family: 'Merriweather', serif; /* Fuente serif para el párrafo */
+}
+
+/* Sección de Postres (Carrusel) */
+#postres {
+    position: relative; /* Posicionamiento relativo para contener el carrusel */
+    width: 100%; /* Ancho completo */
+    max-width: 1200px; /* Ancho máximo para la sección */
+    margin: 40px auto; /* Márgenes superior e inferior, centrado */
+    overflow: hidden; /* Oculta el contenido desbordado */
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Relleno alrededor del contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+#postres h2 {
+    text-align: center; /* Centra el título */
+    font-size: 2.5em; /* Tamaño grande para el título */
+    color: #d32f2f; /* Color rojo para el título */
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.carrusel {
+    display: flex; /* Utiliza flexbox para el carrusel */
+    transition: transform 0.5s ease-in-out; /* Transición suave para los cambios de imagen */
+}
+
+.carrusel img {
+    width: 100%; /* Las imágenes ocupan el 100% del contenedor */
+    height: 300px; /* Tamaño de las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra todo el área sin deformarse */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Botones de navegación del carrusel */
+.carrusel-boton {
+    position: absolute; /* Posiciona los botones de forma absoluta en relación con el contenedor */
+    top: 50%; /* Los coloca a la mitad de la altura */
+    transform: translateY(-50%); /* Ajusta para centrar el botón verticalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    color: #fff; /* Texto blanco */
+    border: none; /* Elimina el borde */
+    padding: 10px; /* Relleno interno */
+    cursor: pointer; /* Cambia el cursor a puntero para indicar que es interactivo */
+    border-radius: 50%; /* Hace que el botón tenga forma circular */
+    font-size: 1.5em; /* Tamaño grande para el texto */
+}
+
+.carrusel-boton.izquierda {
+    left: 10px; /* Coloca el botón a la izquierda */
+}
+
+.carrusel-boton.derecha {
+    right: 10px; /* Coloca el botón a la derecha */
+}
+
+.carrusel-boton:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cambia el fondo al pasar el cursor para indicar interactividad */
+}
+
+/* Sección de Noticias */
+#noticias {
+    background-color: #ffebee; /* Fondo de color suave (rosa claro) */
+    padding: 40px; /* Relleno alrededor de la sección */
+}
+
+#noticias h2 {
+    text-align: center; /* Centra el título */
+    font-size: 2.5em; /* Tamaño grande para el título */
+    color: #d32f2f; /* Color rojo para el título */
+    font-family: 'Playfair Display', serif; /* Fuente serif elegante */
+}
+
+#noticias p {
+    text-align: center; /* Centra el párrafo */
+    font-size: 1.2em; /* Tamaño de texto mayor */
+    margin: 20px 0; /* Márgenes superior e inferior */
+    font-family: 'Merriweather', serif; /* Fuente serif */
+}
+
+.noticias {
+    text-align: center; /* Centra el contenido dentro del contenedor de noticias */
+    margin-top: 20px; /* Espacio arriba */
+}
+
+.noticia-enlace {
+    display: inline-block; /* Hace que el enlace se comporte como un bloque en línea */
+    padding: 10px 20px; /* Relleno dentro del enlace */
+    background-color: #d32f2f; /* Fondo rojo */
+    color: #fff; /* Texto blanco */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    font-size: 1.2em; /* Tamaño de texto mayor */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.noticia-enlace:hover {
+    background-color: #b71c1c; /* Fondo más oscuro al pasar el cursor */
+    text-decoration: underline; /* Subraya el enlace al pasar el cursor */
+}
+
+/* Estilo para el contenedor de noticias cargadas */
+#noticias-container {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra los elementos */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+#noticias-container div {
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde gris claro */
+    padding: 20px; /* Relleno interno */
+    width: 80%; /* Ancho del 80% */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+}
+
+#noticias-container h3 {
+    color: #d32f2f; /* Título rojo */
+    font-family: 'Playfair Display', serif; /* Fuente serif elegante */
+    font-size: 1.8em; /* Tamaño grande para el subtítulo */
+    margin-bottom: 10px; /* Espacio debajo del subtítulo */
+}
+
+#noticias-container p {
+    font-size: 1.2em; /* Tamaño de texto mayor para los párrafos */
+    color: #555; /* Color gris para el texto */
+    font-family: 'Merriweather', serif; /* Fuente serif */
+}
+
+/* Sección de Galería */
+#galeria {
+    padding: 40px; /* Relleno alrededor de la sección */
+    background-color: #ffebee; /* Fondo rosa claro */
+    text-align: center; /* Centra el contenido */
+}
+
+#galeria h2 {
+    font-size: 2.5em; /* Tamaño grande para el título */
+    color: #d32f2f; /* Rojo para el título */
+    font-family: 'Playfair Display', serif; /* Fuente serif */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+#galeria a {
+    margin: 10px; /* Espacio entre las imágenes */
+    display: inline-block; /* Hace que cada enlace sea un bloque en línea */
+    text-align: center; /* Centra el contenido del enlace */
+}
+
+#galeria img {
+    width: 200px; /* Establece el tamaño de las imágenes */
+    height: 200px; /* Establece el tamaño de las imágenes */
+    border-radius: 10px; /* Bordes redondeados */
+    object-fit: cover; /* Asegura que las imágenes cubran el área sin deformarse */
+}
+
+/* Marco de las imágenes con nombre */
+.marco {
+    position: relative; /* Posiciona el nombre sobre la imagen */
+    width: 300px; /* Ancho del marco */
+    height: 300px; /* Altura del marco */
+    margin: 0 auto; /* Centra el marco en la página */
+}
+
+.marco img {
+    width: 100%; /* La imagen ocupa el 100% del marco */
+    height: 100%; /* La imagen ocupa el 100% del marco */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 10px rgba(244, 36, 36, 0.2); /* Sombra sutil para la imagen */
+}
+
+.nombre-plato {
+    position: absolute; /* Posiciona el nombre sobre la imagen */
+    bottom: 0; /* Lo coloca en la parte inferior */
+    width: 100%; /* El nombre ocupa el 100% del ancho */
+    text-align: center; /* Centra el nombre */
+    background-color: hsla(0, 0%, 100%, 0.059); /* Fondo semitransparente */
+    color: #fff; /* Texto blanco */
+    padding: 10px; /* Relleno alrededor del nombre */
+    font-size: 1.2em; /* Tamaño de texto mayor */
+    font-family: 'Merriweather', serif; /* Fuente serif */
+    border-bottom-left-radius: 10px; /* Bordes redondeados inferiores */
+    border-bottom-right-radius: 10px; /* Bordes redondeados inferiores */
+}
+
+/* Contenedor del formulario */
+#presupuesto {
+    background-color: #fff; /* Fondo blanco para la sección */
+    padding: 40px; /* Relleno alrededor del contenido */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo del formulario */
+#presupuesto form {
+    display: inline-block; /* Hace que el formulario se alinee de forma inline */
+    text-align: left; /* Alinea el texto del formulario a la izquierda */
+    background-color: #fafafa; /* Fondo gris claro para el formulario */
+    padding: 20px; /* Relleno dentro del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+}
+/* Etiquetas */
+#presupuesto label {
+    font-size: 1.2em; /* Tamaño de fuente mayor para las etiquetas */
+    display: block; /* Hace que las etiquetas se comporten como bloques */
+    margin-top: 10px; /* Espacio superior */
+    font-family: 'Merriweather', serif; /* Fuente serif */
+}
+
+/* Campos de entrada y selección */
+#presupuesto select, 
+#presupuesto input[type="number"] {
+    padding: 10px; /* Relleno dentro de los campos */
+    width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+    font-size: 1em; /* Tamaño de texto estándar */
+    margin-top: 10px; /* Espacio superior */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ddd; /* Borde gris claro */
+}
+
+/* Campo de texto adicional */
+#presupuesto textarea {
+    padding: 10px; /* Relleno interno */
+    width: 100%; /* Asegura que el área de texto ocupe todo el ancho disponible */
+    font-size: 1em; /* Tamaño de texto estándar */
+    margin-top: 10px; /* Espacio superior */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ddd; /* Borde gris claro */
+    resize: vertical; /* Permite que el usuario redimensione el campo solo en dirección vertical */
+}
+
+/* Botones */
+#presupuesto button {
+    background-color: #d32f2f; /* Fondo rojo */
+    color: #fff; /* Texto blanco */
+    border: none; /* Elimina el borde */
+    padding: 15px 30px; /* Relleno interno */
+    font-size: 1.2em; /* Tamaño de texto mayor */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio superior */
+    cursor: pointer; /* Cursor tipo mano */
+}
+
+#presupuesto button:hover {
+    background-color: #b71c1c; /* Fondo más oscuro al pasar el cursor */
+}
+
+/* Campo de salida del presupuesto */
+#presupuesto output {
+    display: inline-block; /* Hace que el campo de salida sea un bloque en línea */
+    padding: 5px; /* Relleno interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    font-size: 1rem; /* Tamaño de fuente estándar */
+    width: 80px; /* Ancho fijo */
+    text-align: right; /* Alinea el texto a la derecha */
+    margin-top: 10px; /* Espacio superior */
+    font-weight: bold; /* Hace que el texto sea en negrita */
+}
+
+/* Sección de Contacto */
+#contacto {
+    text-align: center; /* Centra el contenido */
+    padding: 40px; /* Relleno alrededor de la sección */
+    background-color: #fff; /* Fondo blanco */
+}
+
+#contacto h2 {
+    font-size: 2.5em; /* Tamaño grande para el título */
+    color: #a52727; /* Color rojo oscuro */
+    font-family: 'Playfair Display', serif; /* Fuente serif elegante */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+#contacto form {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra los elementos */
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+#contacto input, #contacto textarea, #contacto button {
+    width: 80%; /* Ancho del 80% para los campos de entrada */
+    max-width: 500px; /* Ancho máximo para evitar campos demasiado grandes */
+    padding: 10px; /* Relleno interno */
+    font-size: 1em; /* Tamaño de texto estándar */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#contacto button {
+    background-color: #d32f2f; /* Fondo rojo */
+    color: #fff; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cursor tipo mano */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+#contacto button:hover {
+    background-color: #b71c1c; /* Fondo más oscuro al pasar el cursor */
+}
+
+/* Estilo para el contenedor del mapa */
+#mapa {
+    margin-top: 40px; /* Espacio superior */
+    height: 400px; /* Altura del mapa */
+    width: 100%; /* Ancho completo */
+    max-width: 800px; /* Ancho máximo para limitar el mapa */
+    margin-left: auto; /* Centra el mapa horizontalmente */
+    margin-right: auto; /* Centra el mapa horizontalmente */
+    border: 2px solid #ddd; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para el botón de calcular ruta */
+#calcularRutaBtn {
+    background-color: #c72020; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    border: none; /* Elimina el borde */
+    width: 40%%; /* Ancho del 80% */
+    padding: 20px; /* Relleno */
+    text-align: center; /* Centrado del texto */
+    font-size: 16px; /* Tamaño de texto */
+    margin: 20px; /* Márgenes superior e inferior y centrado automático */
+    margin-left: 35%; /* Margen izquierdo*/
+    margin-right:50px /* Margen derecho*/
+    cursor: pointer; /* Cursor tipo mano */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Centrar el contenedor */
+#calcularRutaContainer {
+    text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+/* Footer General */
+footer {
+    position: relative; /* Posición relativa para superponer elementos si es necesario */
+    z-index: 10; /* Asegura que el pie de página esté por encima de otros elementos */
+    background-color: #a52727; /* Fondo rojo oscuro */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 20px 10px; /* Relleno dentro del pie de página */
+    margin-top: 100px; /* Espacio superior */
+    font-family: 'Merriweather', serif; /* Fuente serif */
+}
+
+/* Redes sociales */
+footer .redes-sociales {
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+footer .redes-sociales a {
+    color: #fff; /* Texto blanco para los enlaces */
+    font-size: 1.5em; /* Tamaño adecuado para iconos */
+    margin: 0 15px; /* Espacio entre los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+footer .redes-sociales a:hover,
+footer .redes-sociales a:focus {
+    color: #ffcccb; /* Color rosado claro al pasar el cursor */
+    text-decoration: underline; /* Subraya el enlace al pasar el cursor */
+}
+
+/* Logo del footer */
+footer .logo-footer {
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+footer .logo-footer img {
+    width: 40px; /* Ancho del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    max-width: 100%; /* Limita el tamaño máximo */
+    display: inline-block; /* Alinea el logo de forma inline */
+}
+
+/* Texto del pie */
+footer p {
+    margin-top: 10px; /* Espacio superior */
+    font-size: 1em; /* Tamaño estándar */
+}
+
+/* Dirección de la empresa */
+footer .direccion {
+    margin-top: 5px; /* Espacio superior */
+    font-size: 0.9em; /* Tamaño más pequeño */
+    font-style: italic; /* Estilo de letra en cursiva */
+    color: #fff; /* Texto blanco */
+    font-family: 'Merriweather', serif; /* Fuente serif */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .plato {
+        width: 100%; /* Hace que los platos ocupen el 100% del ancho en pantallas pequeñas */
+    }
+
+    #menu {
+        flex-direction: column; /* Cambia el menú a una disposición en columna */
+        padding: 20px; /* Ajusta el relleno del menú */
+    }
+
+    header {
+        flex-direction: column; /* Ajusta el encabezado a disposición en columna */
+    }
+
+    header h1 {
+        font-size: 2em; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    nav ul li {
+        display: block; /* Hace que los enlaces de navegación sean bloques */
+        margin: 10px 0; /* Espaciado vertical entre los elementos del menú */
+    }
+
+    #noticias-container div {
+        width: 100%; /* Hace que las noticias se ajusten al 100% del ancho en pantallas pequeñas */
+    }
+}
+

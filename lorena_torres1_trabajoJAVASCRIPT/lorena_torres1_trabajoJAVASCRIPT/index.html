@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catering Navideño: Descubre nuestros exclusivos menús para tus celebraciones navideñas. ¡Haz tu fiesta inolvidable!">
+    <meta property="og:title" content="Catering Navideño">
+    <meta property="og:description" content="Descubre nuestros exclusivos menús para tus celebraciones navideñas. ¡Haz tu fiesta inolvidable!">
+    <meta property="og:image" content="images/logo.jpg">
+    <meta property="og:url" content="https://www.cateringnavideno.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Catering Navideño</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Logo de Catering Navideño">
+        </div>
+        <h1>Catering Navideño</h1>
+    </header>
+    
+    <!-- Menú de navegación -->
+    <nav aria-label="Menú principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección de Bienvenida -->
+        <section id="bienvenida">
+            <div class="contenido">
+                <h2>¡Bienvenidos a nuestro servicio de catering navideño!</h2>
+                <p>Te ofrecemos un servicio de catering exclusivo para tus celebraciones navideñas. Haz de tu fiesta algo inolvidable con nuestros deliciosos menús y un servicio inmejorable.</p>
+                <p>Despreocúpate de organizar, cocinar y limpiar. ¡Nosotros lo hacemos por ti!</p>
+            </div>
+        </section>
+
+        <!-- Secciones de Menús -->
+        <section id="menu-entrantes">
+            <h2>Entrantes</h2>
+            <div class="swiper-container swiper-entrantes">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="marco">
+                            <img src="images/pimientos.jpeg" alt="Pimientos rellenos de bacalao en un plato blanco">
+                            <div class="nombre-plato">Pimientos rellenos de bacalao</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="marco">
+                            <img src="images/pollo.jpeg" alt="Pollo asado con guarnición de verduras frescas">
+                            <div class="nombre-plato">Pollo asado con guarnición</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section id="menu-principales">
+            <h2>Principales</h2>
+            <div class="swiper-container swiper-principales">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="marco">
+                            <img src="images/crema.jpg" alt="Crema de calabaza servida en un tazón con hierbas frescas">
+                            <div class="nombre-plato">Crema de calabaza</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="marco">
+                            <img src="images/pavoRelleno.jpg" alt="Pavo relleno decorado con frutas y hierbas">
+                            <div class="nombre-plato">Pavo relleno</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section id="menu-postres">
+            <h2>Postres</h2>
+            <div class="swiper-container swiper-postres">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="marco">
+                            <img src="images//mousse.jpg" alt="Mpusse">
+                            <div class="nombre-plato">Mousse</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="marco">
+                            <img src="images/bocaditosLimon.jpg" alt="Bocaditos de Limon">
+                            <div class="nombre-plato">Bocaditos de Limon</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="marco">
+                            <img src="images/roscon.jpeg" alt="Roscón de Reyes decorado con frutas confitadas">
+                            <div class="nombre-plato">Roscón de Reyes</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sección de Noticias -->
+    <section id="noticias">
+        <h2>Noticias</h2>
+        <p>Descubre en el siguiente enlace lo que opinan de nosotros en revistas como Condé Nast Traveler:</p>
+        <div class="noticias">
+            <a href="https://www.traveler.es/gastronomia/articulos/mejores-caterings-de-comida-navidad/14186" target="_blank" class="noticia-enlace">Condé Nast Traveler</a>
+            <div id="noticias-container"></div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section id="testimonios">
+        <h2>Testimonios</h2>
+        <div class="swiper-container swiper-testimonios">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <p>"¡La comida fue espectacular! Todos mis invitados quedaron encantados." - Laura</p>
+                </div>
+                <div class="swiper-slide">
+                    <p>"¡Increíble servicio, definitivamente volveremos a contratarlo el próximo año!" - José</p>
+                </div>
+                <div class="swiper-slide">
+                    <p>"Un catering delicioso y un servicio excelente. ¡Nos hicieron sentir como en casa!" - Marta</p>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo-footer">
+            <img src="images/logo.jpg" alt="Logo de Catering Navideño">
+        </div>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p>© 2024 Navidad Artesanal | Todos los derechos reservados</p>
+        <p class="direccion">Calle Gambo, 11, Benidorm</p>
+    </footer>
+    
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Configuración general para Swiper.js
+        const swipers = document.querySelectorAll('.swiper-container');
+        swipers.forEach(container => {
+            new Swiper(container, {
+                loop: true,
+                navigation: {
+                    nextEl: container.querySelector('.swiper-button-next'),
+                    prevEl: container.querySelector('.swiper-button-prev'),
+                },
+                autoplay: {
+                    delay: 5000,
+                },
+                slidesPerView: 1,
+                centeredSlides: true,
+            });
+        });
+    </script>
+</body>
+</html>

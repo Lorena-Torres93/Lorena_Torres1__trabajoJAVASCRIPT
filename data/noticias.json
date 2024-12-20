@@ -1,0 +1,25 @@
+<script>
+    // Datos simulados de noticias
+    const noticias = [
+        {
+            "titulo": "Menú especial Navidad 2024",
+            "descripcion": "Descubre el nuevo menú navideño para tus celebraciones con platos tradicionales y exclusivos."
+        },
+        {
+            "titulo": "¡Reserva tu catering ahora!",
+            "descripcion": "¡Las plazas para el catering navideño se están agotando! Reserva antes del 10 de diciembre y asegúrate un lugar."
+        }
+    ];
+
+    // Cargar noticias dinámicamente
+    const container = document.getElementById('noticias-container');
+    noticias.forEach(noticia => {
+        const noticiaDiv = document.createElement('div');
+        noticiaDiv.className = 'noticia';
+        noticiaDiv.innerHTML = `
+            <h3>${noticia.titulo}</h3>
+            <p>${noticia.descripcion}</p>
+        `;
+        container.appendChild(noticiaDiv);
+    });
+</script>
